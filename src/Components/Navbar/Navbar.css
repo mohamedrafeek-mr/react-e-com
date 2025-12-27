@@ -1,0 +1,136 @@
+.navbar{
+    padding: 30px;
+    padding-inline: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .link ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+}
+
+.navbar .link ul li{
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+
+.nav_icon_wrapper{
+    display: flex;
+}
+
+.nav_cart{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav_icon{
+    font-size: 34px;
+    margin-left: 35px;
+}
+
+.cart_qty{
+    position: absolute;
+    background-color: red;
+    color: white;
+    right: -8px;
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -10px;
+}
+.nav_icon_wrapper,.hamburger{
+    font-size: 32px;
+    cursor: pointer;
+}
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Tablet styles (small laptops / large tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .navbar{
+        padding: 20px;
+        padding-inline: 40px;
+    }
+
+    .navbar .link ul{
+        gap: 16px;
+    }
+
+    .nav_icon{
+        font-size: 28px;
+        margin-left: 20px;
+    }
+
+    /* keep the hamburger hidden on tablet by default */
+    .hamburger{
+        display: none;
+    }
+}
+
+/* Mobile styles (phones) */
+@media (max-width: 600px) {
+
+    .navbar{
+        padding: 15px;
+        padding-inline: 20px;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+        position: absolute;
+        right: 16px;
+        top: 22px;
+    }
+
+    .link {
+        display: none;
+        width: 100%;
+    }
+
+    .link.active {
+        display: block;
+    }
+
+    .navbar .link ul {
+        flex-direction: column;
+        gap: 12px;
+        background: #ffffff;
+        padding: 12px;
+        margin-top: 10px;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .nav_icon_wrapper {
+        width: 35%;
+        /* justify-content: flex-end; */
+        margin-top: 10px;
+        gap: 12px;
+    }
+
+    .nav_icon {
+        margin-left: 0;
+        font-size: 28px;
+    }
+
+    .cart_qty{
+        right: -6px;
+        top: -8px;
+    }
+}

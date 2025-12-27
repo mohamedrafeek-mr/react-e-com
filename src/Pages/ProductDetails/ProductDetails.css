@@ -1,0 +1,139 @@
+/* Main container */
+.product-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 20px;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+/* Left image */
+.details-left img {
+  width: 460px;
+  max-width: 60%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Right details */
+.details-right {
+  flex: 1; /* Take remaining space */
+  padding: 20px;
+}
+
+.details-right h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.details-right .product_price {
+  font-size: 22px;
+  margin-top: 10px;
+  color: red;
+}
+
+.details-right .desc {
+  font-size: 18px;
+  color: #666;
+  margin-top: 15px;
+}
+
+.details-right button {
+  padding: 1rem 3.6rem;
+  margin-top: 20px;
+  border: none;
+  color: white;
+  background-color: red;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.details-right button:hover {
+  background-color: darkred;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* Related products section */
+.related-products {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 20px 10px;
+  margin-top: 40px;
+  border-radius: 8px;
+}
+
+.related-products h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Grid container for related products */
+.related-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Each related product */
+.related-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 140px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.related-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.related-item:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .details-right {
+    padding: 10px;
+  }
+
+  .details-right h3 {
+    font-size: 24px;
+  }
+
+  .details-right .product_price {
+    font-size: 20px;
+  }
+
+  .details-right .desc {
+    font-size: 16px;
+  }
+
+  .details-right button {
+    padding: 0.8rem 2.5rem;
+  }
+
+  .related-item {
+    width: 120px;
+  }
+}
